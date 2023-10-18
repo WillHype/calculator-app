@@ -1,3 +1,4 @@
+![image](https://github.com/WillHype/calculator-app/assets/11022174/ebff07e4-b078-4612-b7e7-f8d50ab4b674)
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

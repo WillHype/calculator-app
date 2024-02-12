@@ -59,6 +59,11 @@ const reducer = (state, action) => {
   // Fonction pour gérer le calcul du résultat
   const handleResult = (currentOperand) => {
     try {
+      // Vérifie s'il y a un zéro non significatif
+      if (/^0[0-9]/.test(currentOperand)) {
+        throw new Error('Invalid number format');
+      }
+  
       const result = eval(currentOperand);
       return isNaN(result) ? 'Error' : result.toString();
     } catch (error) {
@@ -66,6 +71,7 @@ const reducer = (state, action) => {
       return currentOperand;
     }
   };
+  
   
   // Fonction pour gérer la suppression d'un caractère
   const handleRemove = (currentOperand) => {
